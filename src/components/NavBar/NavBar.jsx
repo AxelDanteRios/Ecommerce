@@ -1,37 +1,39 @@
-import CardWidget from "../CardWidget/CardWidget"
+import CardWidget from "../CardWidget/CardWidget";
+import { Link } from "react-router-dom";
 
 
-export default function NavBar(){
-    return(
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid w-auto">
-             <ul className="navbar-nav">
+export default function NavBar({title}) {
+  return (
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+          <div className="container-fluid w-auto">
+              <Link className="navbar-brand" to="/">
+                  {title}
+              </Link>
+              <ul className="navbar-nav">
                   <li className="nav-item">
-                    <a className="nav-link " href="#">Home</a>
+                      <Link className="nav-link" to="/">Home</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Consolas</a>
+                      <Link className="nav-link" to="/category/consolas">Consolas</Link>
                   </li>
 
-            
-                  <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                      <ul className="navbar-nav">
-                      <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Juegos</a>
-                          <ul className="dropdown-menu dropdown-menu-dark">
-                            <li><a className="dropdown-item" href="#">Sega</a></li>
-                            <li><a className="dropdown-item" href="#">Nes</a></li>
-                            <li><a className="dropdown-item" href="#">Atari</a></li> 
-                          </ul>
-                        </li>
+                  <li className="nav-item dropdown">
+                      <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Juegos
+                      </Link>
+                      <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                          <li><Link className="dropdown-item" to="/category/juegos">Sega</Link></li>
+                          <li><Link className="dropdown-item" to="/category/juegos">Nes</Link></li>
+                          <li><Link className="dropdown-item" to="/category/juegos">Atari</Link></li>
                       </ul>
-                    </div>
-                    <li className="nav-item">
-                    <a className="nav-link" href="#">Accesorios</a>
                   </li>
-            </ul>
-        </div>
-            <CardWidget/>
-        </nav>
-    )
+
+                  <li className="nav-item">
+                      <Link className="nav-link" to="/category/accesorios">Accesorios</Link>
+                  </li>
+              </ul>
+          </div>
+          <CardWidget cartCount={2} />
+      </nav>
+  );
 }

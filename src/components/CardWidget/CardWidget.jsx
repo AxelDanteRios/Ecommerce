@@ -1,4 +1,4 @@
-function CardWidget(){
+function CardWidget({cartCount}){
     return(
         <a className="nav-link">
             <svg
@@ -26,8 +26,7 @@ function CardWidget(){
 </g>
 </svg>
 
-
-        <span className="badge text-bg-secondary">4</span>
+{cartCount}
         </a>
     )
 }
