@@ -1,6 +1,6 @@
 function CardWidget({cartCount}){
     return(
-        <a className="nav-link">
+        <a className="nav-link" href="#">
             <svg
 	 width="40" 
      height="40" 

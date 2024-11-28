@@ -1,11 +1,14 @@
 import CardWidget from "../CardWidget/CardWidget";
 import { Link } from "react-router-dom";
-
+import './NavBar.css'
 
 export default function NavBar({title}) {
   return (
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
-          <div className="container-fluid w-auto">
+        <Link to="/">
+        <img src="../../src/assets/retroreplay.jpeg" alt="Logo" className="logo" />
+      </Link>
+          <div className="container-fluid w-50 h-100">
               <Link className="navbar-brand" to="/">
                   {title}
               </Link>
@@ -28,12 +31,21 @@ export default function NavBar({title}) {
                       </ul>
                   </li>
 
+                  {/* <li className="nav-item">
+                <Link className="nav-link" to="/contacto">
+                  Contacto
+                </Link>
+                <a className="nav-link" href="/contacto">Contacto</a>
+              </li> */}
                   <li className="nav-item">
                       <Link className="nav-link" to="/category/accesorios">Accesorios</Link>
                   </li>
               </ul>
           </div>
-          <CardWidget cartCount={2} />
+          <form className="d-flex" role="search">
+            <CardWidget cartCount={2} />
+          </form>
+          
       </nav>
   );
 }

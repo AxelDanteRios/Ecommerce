@@ -1,0 +1,17 @@
+.navbar{
+ height:  5.5rem;
+ place-content: center;
+
+}
+.logo{
+    width: 5rem;
+    border-radius: 80px;
+}
+
+.container-fluid{
+    margin: 0px 110px;
+}
+
+.navbar>.container-fluid{
+     justify-content: center;
+}

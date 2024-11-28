@@ -1,8 +1,9 @@
 import {Link} from "react-router-dom"
+import './Item.css'
 export default function Item({product}) {
   return (
 
-         <div className="card" style={{width: "18rem"}}>
+         <div className="card" style={{width: "18rem" , height: "27rem"}}>
         <img src={product.img} alt={product.name} className="card-img-top" />
         <div className="card-body">
             <h2 className="card-title">{product.name}</h2>
