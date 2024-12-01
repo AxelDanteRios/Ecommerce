@@ -1,6 +1,7 @@
+import './CardWidget.css'
 function CardWidget({cartCount}){
     return(
-        <a className="nav-link" href="#">
+        <a className="nav-link d-flex" href="#">
             <svg
 	 width="40" 
      height="40" 
@@ -25,8 +26,10 @@ function CardWidget({cartCount}){
 	</g>
 </g>
 </svg>
+<div className="fondoNum">
+	{cartCount}
+</div>
 
-{cartCount}
         </a>
     )
 }

@@ -1,0 +1,10 @@
+.formCheck {width: 50%;
+display: flex;
+flex-direction: column;
+}
+
+.divForm{
+    justify-items: center;
+    height: 35rem;
+    align-content: center;
+}

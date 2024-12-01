@@ -2,7 +2,7 @@ const products =[
     {
       id: "1",
       name: "Family",
-      price: 1000,
+      price: 35000,
       category: "consolas",
       img: "/family.png",
       stock: 25,
@@ -11,7 +11,7 @@ const products =[
     {
       id: "2",
       name: "Sega",
-      price: 900,
+      price: 40000,
       category: "consolas",
       img: "/sega.png",
       stock: 30,
@@ -20,7 +20,7 @@ const products =[
     {
       id: "3",
       name: "Gameboy",
-      price: 800,
+      price: 25000,
       category: "consolas",
       img: "/gameboy.png",
       stock: 20,
@@ -29,7 +29,7 @@ const products =[
     {
       id: "4",
       name: "Toejam and Earl",
-      price: 2500,
+      price: 10000,
       category: "juegos",
       img: "/toejamandearl.png",
       stock: 10,
@@ -38,7 +38,7 @@ const products =[
     {
       id: "5",
       name: "Island adventure",
-      price: 1200,
+      price: 10000,
       category: "juegos",
       img: "/islandadventure.png",
       stock: 15,
@@ -47,7 +47,7 @@ const products =[
     {
       id: "6",
       name: "Pokemon",
-      price: 1300,
+      price: 10000,
       category: "juegos",
       img: "/pokemoncrystal.png",
       stock: 12,
@@ -56,7 +56,7 @@ const products =[
     {
       id: "7",
       name: "Muñeco",
-      price: 350,
+      price: 25000,
       category: "accesorios",
       img: "/muñeco-zelda.png",
       stock: 40,
@@ -65,7 +65,7 @@ const products =[
     {
       id: "8",
       name: "Lampara",
-      price: 300,
+      price: 50000,
       category: "accesorios",
       img: "/lampara-sonic.png",
       stock: 35,
@@ -74,7 +74,7 @@ const products =[
     {
       id: "9",
       name: "Reloj",
-      price: 500,
+      price: 50000,
       category: "accesorios",
       img: "/reloj-mariobros.png",
       stock: 25,
@@ -83,6 +83,11 @@ const products =[
 
   ];
   
+ export function formatPrice(price) {
+    return price.toLocaleString('es-ES');
+}
+
+
   export const getProducts = () => {
       return new Promise((resolve) => {
           setTimeout(()=>{

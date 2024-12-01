@@ -1,8 +1,8 @@
-
+import "./Checkout.css"
 function Checkout() {
   return (
-    <div>
-      <form>
+    <div className="divForm">
+      <form className="formCheck">
         <label>Nombre</label>
         <input type="text" />
         <label>Apellido</label>
