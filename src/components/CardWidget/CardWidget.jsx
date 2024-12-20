@@ -1,5 +1,8 @@
 import './CardWidget.css'
-function CardWidget({cartCount}){
+import { useCart } from "../../hooks/useCart";
+function CardWidget(){
+
+	const {totalQuantity} = useCart();
     return(
         <a className="nav-link d-flex" href="#">
             <svg
@@ -27,7 +30,7 @@ function CardWidget({cartCount}){
 </g>
 </svg>
 <div className="fondoNum">
-	{cartCount}
+	{totalQuantity}
 </div>
 
         </a>

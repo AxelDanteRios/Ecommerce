@@ -3,7 +3,8 @@ import { useState } from "react";
 
 export default function ItemCount({initialValue=1, stock, onAdd}) {
     const [cantidad, setCantidad] = useState(initialValue)
-
+ 
+  
     const decrement = () => {
         if(cantidad>1){
             setCantidad(cantidad => cantidad -1)
@@ -18,9 +19,9 @@ export default function ItemCount({initialValue=1, stock, onAdd}) {
     return (
       <>
         <h1>{cantidad}</h1>
-        <button onClick={decrement}>Decrementar</button>
-        <button onClick={() => onAdd(cantidad)} >Agregar al carrito</button>
-        <button onClick={increment}>Incrementar</button>
+        <button onClick={decrement} className="btn btn-primary border-1 border-dark">Decrementar</button>
+        <button onClick={() => onAdd(cantidad)} className="btn btn-primary border-1 border-dark">Agregar al carrito</button>
+        <button onClick={increment} className="btn btn-primary border-1 border-dark">Incrementar</button>
       </>
     );
 }

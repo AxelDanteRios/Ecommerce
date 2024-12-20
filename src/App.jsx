@@ -5,11 +5,13 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
 import Card from './components/Card';
+import { CartProvider } from "./context/CartContext";
 function App() {
 
 
   return (
     <BrowserRouter>
+      <CartProvider>
     <NavBar title="Retro Replay"/>
     <Routes>
       <Route path="/" element={<ItemListContainer  greeting="Bienvenidos"/>} />
@@ -20,6 +22,7 @@ function App() {
       {/* <Route path="/contacto" element={<Card />} /> */}
       <Route path="*" element={<h2>404</h2>} />
     </Routes>
+    </CartProvider>
     </BrowserRouter>
   )
 }
