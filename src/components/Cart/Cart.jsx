@@ -19,8 +19,8 @@ function Cart() {
     <h3>Total: ${total}</h3>
     <div>
       <button onClick={clearCart}> Limpiar carrito</button>
-    </div>
       <Link to='/checkout'>Comprar</Link>
+      </div>
     </div>
   );
 }

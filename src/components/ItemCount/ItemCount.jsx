@@ -11,10 +11,10 @@ export default function ItemCount({initialValue=1, stock, onAdd}) {
         }
     }
     const increment = () => {
-        if(stock > cantidad){
+        if(cantidad < stock){
             setCantidad((cantidad) => cantidad + 1);
         }
-    }
+    };
 
     return (
       <>

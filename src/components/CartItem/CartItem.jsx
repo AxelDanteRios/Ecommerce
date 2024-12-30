@@ -1,26 +1,28 @@
 import { useCart } from "../../hooks/useCart"
+import './CartItem.css'
 
-
-function CartItem({id, name, quantity, price}) {
+function CartItem({id, name, quantity, price})  {
     // console.log(name)
     const {removeItem} = useCart()
     const handleRemove = (id) => {
         removeItem(id)
     }
   return (
-    <div>
-        <header>
-            <h2>{name}</h2>
-        </header>
-        <section>
-            <p>Cantidad: {quantity}</p>
-            <p>Precio x unidad: ${price}</p>
-        </section>
-        <footer>
-            <p>TSubtotal: $ {price * quantity}</p>
-            <button onClick={() => handleRemove(id)}>Eliminar</button>
-        </footer>
-    </div>
+    <article className="CardCartItem">
+      <header className="HeaderCartItem">
+        <h2 className="ItemHeaderCartItem">{name}</h2>
+      </header>
+      <section className="ContainerItemCartItem">
+        <p className="ItemCartItem">Cantidad: {quantity}</p>
+        <p className="ItemCartItem">Precio x unidad: $ {price}</p>
+      </section>
+      <footer className="ItemFooterCartItem">
+        <p className="InfoCartItem">Subtotal: $ {price * quantity}</p>
+        <button className="btn btn-primary" onClick={() => handleRemove(id)}>
+          ❌
+        </button>
+      </footer>
+    </article>
   )
 }
 

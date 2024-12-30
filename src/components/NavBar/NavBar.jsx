@@ -1,6 +1,7 @@
 import CardWidget from "../CardWidget/CardWidget";
-import { Link } from "react-router-dom";
+import { Link, NavLink} from "react-router-dom";
 import './NavBar.css'
+import DropdownNavLink from "./Dropdown";
 
 export default function NavBar({title}) {
   return (
@@ -14,31 +15,46 @@ export default function NavBar({title}) {
               </Link>
               <ul className="navbar-nav">
                   <li className="nav-item">
-                      <Link className="nav-link" to="/">Home</Link>
+
+                  <NavLink
+                className={({ isActive }) =>
+                  isActive ? "ActiveOption" : "Option"
+                }
+                aria-current="page"
+                to="/"
+                >
+                    Home
+              </NavLink>
+
                   </li>
                   <li className="nav-item">
-                      <Link className="nav-link" to="/category/consolas">Consolas</Link>
-                  </li>
 
-                  <li className="nav-item dropdown">
-                      <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Juegos
-                      </Link>
-                      <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                          <li><Link className="dropdown-item" to="/category/juegos">Sega</Link></li>
-                          <li><Link className="dropdown-item" to="/category/juegos">Nes</Link></li>
-                          <li><Link className="dropdown-item" to="/category/juegos">Atari</Link></li>
-                      </ul>
-                  </li>
+                  <NavLink
+                className={({ isActive }) =>
+                  isActive ? "ActiveOption" : "Option"
+                }
+                aria-current="page"
+                to="/category/consolas"
+                >
+                    Consolas
+              </NavLink>
 
-                  {/* <li className="nav-item">
-                <Link className="nav-link" to="/contacto">
-                  Contacto
-                </Link>
-                <a className="nav-link" href="/contacto">Contacto</a>
-              </li> */}
+                  </li>
+                <DropdownNavLink/>
+
                   <li className="nav-item">
-                      <Link className="nav-link" to="/category/accesorios">Accesorios</Link>
+
+                  <NavLink
+                className={({ isActive }) =>
+                  isActive ? "ActiveOption" : "Option"
+                }
+                aria-current="page"
+                to="/category/accesorios"
+                >
+                    Accesorios
+              </NavLink>
+
+
                   </li>
               </ul>
           </div>
