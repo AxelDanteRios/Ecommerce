@@ -1,3 +1,9 @@
 img{
     height: 50%;
 }
+
+
+.card-body{
+    text-align: center;
+    place-content: center;
+}

@@ -24,23 +24,24 @@ export default function ItemDetailContainer() {
   });
   }, [productId])
 
-  // return (
-  //   <div>
-  //     <h2>Detalle del producto</h2>
-  //     <hr />
-  //     <ItemDetail {...product} />
-  //   </div>
-
-
 
   return (
-    <div className="ItemDetailContainer">
+    
+    <div className="ItemDetailContainer"style={{ 
+      display: "flex", 
+      justifyContent: "center", 
+      alignItems: "center", 
+      height: "100vh" 
+    }}>
       {loading ? (
         <h3
           style={{
             color: "white",
-            backgroundColor: "#d68fff",
+            height: "100%",
+            width: "100%",
+            backgroundColor: "#070926",
             textAlign: "center",
+            alignContent: "center",
           }}
         >
           Cargando...

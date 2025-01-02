@@ -8,8 +8,6 @@ import Card from './components/Card';
 import { CartProvider } from "./context/CartContext";
 import { NotificationProvider } from "./context/NotificationContext";
 function App() {
-
-
   return (
     <BrowserRouter>
     <NotificationProvider>

@@ -2,7 +2,7 @@ import { useCart } from "../../hooks/useCart"
 import './CartItem.css'
 
 function CartItem({id, name, quantity, price})  {
-    // console.log(name)
+
     const {removeItem} = useCart()
     const handleRemove = (id) => {
         removeItem(id)

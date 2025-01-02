@@ -38,16 +38,28 @@ useEffect(()=>{
 },[categoryId])
 if(loading) {
     return (
+      <div 
+      style={{
+        display: "flex", 
+        justifyContent: "center", 
+        alignItems: "center", 
+        height: "100vh",
+      }}
+    >
       <h3
         style={{
           color: "white",
-          backgroundColor: "#d68fff",
+          height: "100%",
+          width: "100%",
+          backgroundColor: "#070926",
           textAlign: "center",
+          alignContent: "center",
         }}
       >
         Cargando productos...
       </h3>
-    );
+    </div>
+  );
   }
 
 return (

@@ -17,39 +17,6 @@ export default function ItemDetail({id, name, img, description, category, price,
   }
 
   return (
-    // <div className="containerDetail">
-    //     <h2>{name}</h2>
-    //     <div className="card">
-    //         <img 
-    //             src={img}
-    //             style={{width: 300}}
-    //             className="card-img-top"
-    //             alt={name}
-    //         />
-
-    //         <div className="card-body">
-    //             <p>{description}</p>
-    //             <p>Category: {category}</p>
-    //             <p>Precio: $ {price}</p>
-    //             <p>Disponible: {stock}</p>
-    //         </div>
-
-    //         {
-    //           isInCart(id) ? (
-    //           <Link to="/cart" className="btn btn-primary">Finalizar compra</Link> 
-    //           ) 
-    //           : (
-    //           <ItemCount stock={stock} onAdd={handleAdd}/>
-    //           )
-    //         }
-            
-            
-
-    //     </div>
-    // </div>
-
-
-
 
     <article className="cardArticle">
     <h2>{name}</h2>

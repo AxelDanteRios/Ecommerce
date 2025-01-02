@@ -64,7 +64,7 @@ function Checkout() {
         await batch.commit();
         const orderRef = collection(db,"orders")
         const orderAdded = await addDoc(orderRef, objOrder);
-        console.log (`el id de su orden es: ${orderAdded.id}`);
+        // console.log (`el id de su orden es: ${orderAdded.id}`);
         setOrderCreated(true)
         clearCart()
       }else{
@@ -85,29 +85,9 @@ function Checkout() {
   }
 
 
-
-//   return (
-//     <div className="divForm">
-//       {/* <form className="formCheck" onSubmit={createOrder}>
-//         <label>Nombre</label>
-//         <input type="text" />
-//         <label>Apellido</label>
-//         <input type="text" />
-//         <label>Email</label>
-//         <input type="email" />
-//         <label>Telefono</label>
-//         <input type="number" />
-
-//         <button type="submit">Generar Oden de Compra</button>      
-//       </form> */}
-//       <button onClick={createOrder}>Generar orden de compra</button>
-//     </div>
-//   )
-// }
-
 return (
-  <>
-    {/* form de checkout */}
+  <div className="formu">
+
     <label htmlFor="nombre">Nombre</label>
     <input onChange={(e) => setNombre(e.target.value)} value={nombre} />{" "}
     <br />
@@ -123,7 +103,7 @@ return (
       {cart.map((item) => (
         <article key={item.id}>
           <header>
-            <h2 className="text-secondary text-center bg-info m-5">
+            <h2 className="text-secondary text-center m-5">
               {item.name}{" "}
               <span className="badge">Cantidad: {totalQuantity}</span>
             </h2>
@@ -132,13 +112,12 @@ return (
       ))}
     </div>
     <h1 className="text-center">Checkout</h1>
-    {/* formulario */}
     <div className="d-flex justify-content-center p-3 ">
-      <button className="btn btn-info" onClick={createOrder}>
+      <button className="btn btn-primary" onClick={createOrder}>
         Generar Orden
       </button>
     </div>
-  </>
+  </div>
 );
 }
 

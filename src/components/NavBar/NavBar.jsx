@@ -59,9 +59,8 @@ export default function NavBar({title}) {
               </ul>
           </div>
           <form className="d-flex" role="search">
-            <CardWidget cartCount={2} />
+            <CardWidget cartCount={0} />
           </form>
-          
       </nav>
   );
 }
